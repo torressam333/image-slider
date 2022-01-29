@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
@@ -18,8 +18,8 @@ body {
 }
 
 #image__slider__container {
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
-  background: rgb(230, 230, 214);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  background: rgb(162, 185, 172);
   justify-content: center;
   max-width: 100rem;
   position: relative;
@@ -32,6 +32,7 @@ body {
 }
 
 #image__slider__container .slides img {
+  animation-name: sliding;
   display: block;
   height: 50rem;
   position: relative;
@@ -62,13 +63,76 @@ body {
   cursor: pointer;
 }
 
-/*Fading effect*/
-div .fading {
-  animation-name: fading;
+.slider__button > i {
+  color: #333;
+  font-size: 3rem;
+}
+
+.slider__button > i:hover {
+  color: cadetblue;
+}
+
+/*Sliding effect*/
+div .sliding {
+  animation-name: sliding;
   animation-duration: 1s;
 }
 
-@keyframes fading {
-  from {opacity: .5}
-  to {opacity: 1}
+@keyframes sliding {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*Mobile considerations*/
+
+/*Screens that are 600px or less*/
+@media only screen and (max-width: 600px) {
+  #image__slider__container {
+    height: 100vh;
+  }
+
+  #slider__heading {
+    color: #333;
+    font-size: 6rem;
+  }
+
+  #button__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+
+  /*Pull next icon to the right preventing overlap with left*/
+  #next-button {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .slider__button > i {
+    font-size: 4.5rem;
+  }
+
+  .slider__button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
 }
