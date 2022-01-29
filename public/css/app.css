@@ -1,0 +1,45 @@
+html {
+  font-size: 62.5%;
+  /*Makes font size base 10 for rem*/
+}
+
+body {
+  align-items: center;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#root-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+#image__slider__container {
+  background-color: #ccc;
+  opacity: 0.5;
+  height: 500px;
+  width: 650px;
+}
+
+#slider__heading {
+  color: black;
+  opacity: 1;
+}
+
+
+/*Button styling*/
+#button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slider__button {
+  padding: 1rem 2rem;
+  margin: 1rem 0 0 0;
+}
