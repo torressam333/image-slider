@@ -2,10 +2,17 @@
   "name": "slider_project",
   "version": "1.0.0",
   "description": "A simple image slider using css, html and javascript",
-  "main": "index.js",
+  "main": "src/ImageSlider.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --env=jsdom"
   },
   "author": "Samuel Torres",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6"
+  }
 }
