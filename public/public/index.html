@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/app.css">
-  <title>Image Slider</title>
-</head>
-<body>
-  <div id="root-container">
-    <h1 id="slider__heading">Image Slider</h1>
-    <div id="image__slider__container">
-        <img src="./images/image1.jpg" alt="fruit">
-        <img src="./images/image2.jpg" alt="lawn chairs">
-        <img src="./images/image3.jpg" alt="igloo">
-        <img src="./images/image4.jpg" alt="vw bug">
-    </div>
-    <div id="button__container">
-      <button class="slider__button">Prev</button>
-      <button class="slider__button">Next</button>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <title>Image Slider</title>
+  </head>
+      <div id="image__slider__container">
+          <h1 id="slider__heading">Image Slider</h1>
+         <div class="slides">
+          <img src="./images/image1.jpg" alt="fruit" />
+        </div>
 
-  <script type="text/javascript" src="../../src/index.js"></script>
-</body>
+        <div class="slides">
+          <img src="./images/image2.jpg" alt="lawn chairs" />
+        </div>
+
+        <div class="slides">
+          <img src="./images/image3.jpg" alt="igloo" />
+        </div>
+
+        <div class="slides">
+          <img src="./images/image4.jpg" alt="vw bug" />
+        </div>
+        <div id="button__container">
+          <button class="slider__button" id="prev-button">Prev</button>
+          <button class="slider__button" id="next-button">Next</button>
+        </div>
+      </div>
+    <script type="text/javascript" src="../../src/index.js"></script>
+  </body>
 </html>
