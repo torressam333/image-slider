@@ -12,14 +12,15 @@ body {
   background-color: #f1f1f1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   height: 100vh;
   margin: 0 auto;
+  text-align: center;
 }
 
 #image__slider__container {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
   background: rgb(230, 230, 214);
+  justify-content: center;
   max-width: 100rem;
   position: relative;
   margin: auto;
@@ -39,7 +40,8 @@ body {
 }
 
 #slider__heading {
-  color: black;
+  color: #333;
+  font-size: 3rem;
 }
 
 /*Button styling*/
@@ -58,4 +60,15 @@ body {
 
 .slider__button:hover {
   cursor: pointer;
+}
+
+/*Fading effect*/
+div .fading {
+  animation-name: fading;
+  animation-duration: 1s;
+}
+
+@keyframes fading {
+  from {opacity: .5}
+  to {opacity: 1}
 }
