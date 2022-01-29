@@ -7,31 +7,36 @@ class ImageSlider {
     this.showSlides(this.slideIndex);
   }
 
-  slideNext(n) {
+  slideNext(num) {
     this.nextButton.addEventListener("click", () => {
-      this.showSlides((this.slideIndex += n));
+      this.showSlides((this.slideIndex += num));
     });
   }
 
-  slidePrev(n) {
+  slidePrev(num) {
     this.prevButton.addEventListener("click", () => {
-      this.showSlides((this.slideIndex -= n));
+      this.showSlides((this.slideIndex -= num));
     });
   }
 
   showSlides(n) {
-    let i;
+    //Convert nodeList to array
+    let slidesArray = Array.from(this.slides);
 
+    //Start slideshow over
     if (n > this.slides.length) this.slideIndex = 1;
-    if (n < this.slides.length) this.slideIndex = this.slides.length;
 
-    for (i = 0; i < this.slides.length; i++) {
-      this.slides[i].style.display = "none";
-    }
+    if (n < 1) this.slideIndex = this.slides.length;
 
-    this.slides[this.slideIndex - 1].style.display = "block";
+    //We don't want to modify the original array
+    slidesArray.map((slide) => {
+      slide.style.display = "none";
+    });
+
+    slidesArray[this.slideIndex - 1].style.display = "block";
   }
 }
 
 const slider = new ImageSlider();
-slider.showSlides(slider.slideIndex);
+slider.slideNext(1);
+slider.slidePrev(-1);

@@ -47,7 +47,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 0.7rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
 }
 
 .slider__button {
