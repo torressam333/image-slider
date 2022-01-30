@@ -1,6 +1,6 @@
 export default class ImageSlide {
   constructor() {
-    this.slides = document.querySelectorAll("slides");
+    this.slides = document.querySelectorAll(".slides");
     this.prevButton = document.querySelector("#prev-button");
     this.nextButton = document.querySelector("#next-button");
     this.slideIndex = 1;
@@ -40,6 +40,6 @@ export default class ImageSlide {
 //Commented out because it conflicts with JEST mocking
 //To get the slider to work: uncomment the 3 lines below
 
-// const slider = new ImageSlide();
-// slider.slideNext(1);
-// slider.slidePrev(-1);
+const slider = new ImageSlide();
+slider.slideNext(1);
+slider.slidePrev(-1);
